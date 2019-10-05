@@ -1,0 +1,28 @@
+{
+  "name": "@0xadada/random-emoji",
+  "version": "1.0.0",
+  "description": "random emoji function with zero dependencies",
+  "main": "random-emoji.js",
+  "repository": "git@github.com:0xadada/random-emoji.git",
+  "author": "0xADADA <0xadada.pub@0xadada.pub>",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "coverage": "yarn nyc report --reporter=text-lcov | yarn coveralls",
+    "lint": "yarn eslint .",
+    "lint:fix": "yarn eslint . --fix",
+    "test": "yarn nyc ava"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "coveralls": "^3.0.6",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2"
+  }
+}
