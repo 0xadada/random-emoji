@@ -2,7 +2,7 @@
   "name": "@0xadada/random-emoji",
   "version": "1.0.0",
   "description": "random emoji function with zero dependencies",
-  "main": "random-emoji.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:0xadada/random-emoji.git",
   "author": "0xADADA <0xadada.pub@0xadada.pub>",
   "license": "MIT",
@@ -11,12 +11,17 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "coverage": "yarn nyc report --reporter=text-lcov | yarn coveralls",
-    "lint": "yarn eslint .",
-    "lint:fix": "yarn eslint . --fix",
-    "test": "yarn nyc ava"
+    "coverage": "npx nyc report --reporter=text-lcov | yarn coveralls",
+    "build": "npx babel src/ --out-dir dist/",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "test": "npx nyc ava",
+    "prepublish": "npm run lint && npm run test && npm run build"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "ava": "^2.4.0",
     "coveralls": "^3.0.6",
     "eslint": "^6.5.1",

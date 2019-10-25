@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 
+
 # misc
 .env
 .tool-versions
@@ -12,3 +13,5 @@ npm-debug.log*
 package-lock.json
 yarn-error.log
 
+# built assets
+/dist
