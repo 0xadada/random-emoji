@@ -22,7 +22,7 @@ jobs:
 
       - run:
           name: Lint
-          command: yarn lint
+          command: npm run lint
       - run:
           name: Test
-          command: yarn test && yarn coverage
+          command: npm run test && npm run coverage

@@ -1,5 +1,5 @@
 import test from 'ava';
-import random from './random-emoji';
+import random from './src/index';
 
 test('without arguments it shows an emoticon', t => {
   const a = random();
