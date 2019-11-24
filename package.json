@@ -12,22 +12,28 @@
   },
   "scripts": {
     "coverage": "npx nyc report --reporter=text-lcov | yarn coveralls",
-    "build": "npx babel src/ --out-dir dist/",
+    "build": "npx tsc",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
-    "test": "npx nyc ava",
-    "prepublish": "npm run lint && npm run test && npm run build"
+    "test": "npm run build && npx nyc ava",
+    "prepublish": "npm run build && npm run test",
+    "start": "npm run build && node -e \"let { default: r } = require('./dist/index'); console.log(r('food'));\""
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "@babel/preset-typescript": "^7.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
     "ava": "^2.4.0",
+    "babel-eslint": "^10.0.3",
     "coveralls": "^3.0.6",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.3.0",
+    "eslint": "^6.7.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "nyc": "^14.1.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
   }
 }

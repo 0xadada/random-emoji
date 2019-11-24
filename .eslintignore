@@ -1,2 +1,7 @@
 # compiled output
+<<<<<<< HEAD
 /dist/
+=======
+dist/
+lib/
+>>>>>>> 93a6802... refactored to TypeScript

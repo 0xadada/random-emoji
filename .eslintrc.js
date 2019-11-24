@@ -1,20 +1,28 @@
 module.exports = {
   root: true,
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2015,
+    project: './tsconfig.json',
+    ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['prettier'],
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-  env: {
-    browser: true,
-    node: true
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended'
+  ],
+  rules: {
+    '@typescript-eslint/no-inferrable-types': 1
   },
   overrides: [
     {
+      parser: 'babel-eslint',
       parserOptions: {
         sourceType: 'module',
-        ecmaVersion: 2017
+        ecmaVersion: 2018
       },
       env: {
         browser: false,

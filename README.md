@@ -15,17 +15,21 @@ _random emoji function with zero dependencies_
 
 ```bash
 $ yarn add @0xadada/random-emoji
+$ npm run -s start
+> 🙄
+$ npm run -s start
+> 😜
 $ node
-> const random = require('@0xadada/random-emoji');
+> const { default: random } = require('@0xadada/random-emoji');
 > random()
 '😁'
-let a = random();  // defaults to 'emoticons'
-let b = random('emoticons');
-let c = random('food');
-let d = random('animals');
-let e = random('expressions');
-console.log(a, b, c, d, e);
-// 😍 🙄 🍗 🐥 🤢
+> let a = random();  // defaults to 'emoticons'
+> let b = random('emoticons');
+> let c = random('food');
+> let d = random('animals');
+> let e = random('expressions');
+> console.log(a, b, c, d, e);
+😍 🙄 🍗 🐥 🤢
 ```
 
 
