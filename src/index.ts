@@ -13,4 +13,4 @@ const random = function(range: NamedCharRange = 'emoticons'): string {
   return String.fromCodePoint(codePoint);
 };
 
-export = random;
+export default random;
