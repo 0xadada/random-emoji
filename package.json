@@ -17,7 +17,7 @@
     "lint:fix": "npx eslint . --fix",
     "test": "npm run build && npx nyc ava",
     "prepublish": "npm run build && npm run test",
-    "start": "npm run build && node -e \"let { default: r } = require('./dist/index'); console.log(r('food'));\""
+    "start": "npm run build && node -e \"let r = require('./dist/index'); console.log(r('food'));\""
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
