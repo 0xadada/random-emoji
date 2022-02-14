@@ -1,4 +1,4 @@
-# @0xadada/random-emoji
+# [@0xadada/random-emoji](https://github.com/0xadada/random-emoji/)
 
 [![CircleCI](https://img.shields.io/circleci/project/github/0xadada/random-emoji/master.svg?style=flat-square)](https://circleci.com/gh/0xadada/random-emoji)
 [![Coveralls branch](https://img.shields.io/coveralls/0xadada/random-emoji/master.svg?style=flat-square)](https://coveralls.io/github/0xadada/random-emoji?branch=master)
