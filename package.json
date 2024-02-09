@@ -1,9 +1,12 @@
 {
   "name": "@0xadada/random-emoji",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "random emoji function with zero dependencies",
   "main": "dist/index.js",
-  "repository": "git@github.com:0xadada/random-emoji.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/0xadada/random-emoji.git"
+  },
   "author": "0xADADA <0xadada.pub@0xadada.pub>",
   "license": "MIT",
   "private": false,
@@ -15,9 +18,9 @@
     "build": "npx tsc",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
-    "test": "npm run build && npx nyc ava",
+    "test": "npm run build && npx ava",
     "prepublish": "npm run build && npm run test",
-    "start": "npm run build && node -e \"let r = require('./dist/index'); console.log(r('food'));\""
+    "start": "[ -f \"dist/index.js\" ] || npm run build && node -e \"console.log(require('./dist/index').random());\""
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -28,11 +31,9 @@
     "@typescript-eslint/parser": "^2.8.0",
     "ava": "^2.4.0",
     "babel-eslint": "^10.0.3",
-    "coveralls": "^3.0.6",
     "eslint": "^6.7.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "nyc": "^14.1.1",
     "prettier": "^1.19.1",
     "typescript": "^3.7.2"
   }
