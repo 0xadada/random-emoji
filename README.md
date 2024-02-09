@@ -1,7 +1,5 @@
 # @0xadada/random-emoji
 
-[![CircleCI](https://img.shields.io/circleci/project/github/0xadada/random-emoji/master.svg?style=flat-square)](https://circleci.com/gh/0xadada/random-emoji)
-
 _random emoji function with zero dependencies_
 
 ## Benefits
